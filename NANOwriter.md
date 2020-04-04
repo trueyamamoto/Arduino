@@ -4,16 +4,19 @@
 <p>on Windows, install <a href="http://winavr.sourceforge.net/" target="_blank">WinAVR</a> and set the path of avrdude command to command prompt</p>
 
 <h2>2.make an Arduino ISP gadget</h2>
-<p><img src="./img_nanowriter/writer_diagram.png" width="30%"></p>
-<p><img src="./img_nanowriter/writer_parts.jpg" width="30%"></p>
-<p><img src="./img_nanowriter/writer.jpg" width="30%"></p>
-<p>and need a USB A-miniB cable</p>
-<p>Install and run <a href="https://www.arduino.cc/en/main/software" target="_blank">Arduino IDE</a></p>
-<p>File >> Examples >> 11.ArduinoISP >> ArduinoISP<br>
-         <img src="./img_nanowriter/arduinoisp_load.png" width="30%"></p>
-<p>Board and Programmer setting<br>
-         <img src="./img_nanowriter/arduinoisp_set.png" width="30%"></p>
-<p>Sketch >> Upload</p>
+<img src="./img_nanowriter/writer_diagram.png" width="30%">
+<img src="./img_nanowriter/writer_parts.jpg" width="30%">
+<img src="./img_nanowriter/writer.jpg" width="30%">
+<br>(and need a USB A-miniB cable)
+<ol>
+         <li>make the gadget</li>
+         <li>Install and run <a href="https://www.arduino.cc/en/main/software" target="_blank">Arduino IDE</a></li>
+         <li>File >> Examples >> 11.ArduinoISP >> ArduinoISP<br>
+                  <img src="./img_nanowriter/arduinoisp_load.png" width="30%"></li>
+         <li>Board and Programmer setting<br>
+                  <img src="./img_nanowriter/arduinoisp_set.png" width="30%"></li>
+         <li>Sketch >> Upload</li>
+</ol>
 
 <h2>3.set fuse bytes of the ATMEGA328P</h2>
 <p>In case the Arduino ISP gadget is connected in COM18 USB port</p>
