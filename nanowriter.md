@@ -196,7 +196,7 @@ avrdude done.  Thank you.
 <h2>Write an Arduino sketch to the ATmega328P</h2>
 <ol>
          <li>download and open the <a href="https://github.com/trueyamamoto/Arduino/blob/master/led_blink.ino" target="_blank">sample sketch</a> on Arduino IDE</li>
-         <li>set configurations of the gadget<br>
+         <li>set configurations of the Arduino ISP gadget<br>
                   Board : ATmega328 on a breadboard (8 MHz internal clock)<br>
                   Programmer : Arduino as ISP<br>
                   <img src="./img_nanowriter/sketch_set.png" width="30%"></li>
