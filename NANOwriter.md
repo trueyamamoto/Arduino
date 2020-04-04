@@ -1,17 +1,20 @@
 <h1>How to write Arduino sketches to ATMEGA328P with ArduinoNANO compatibles</h1>
 
-<h2>1.enable to avrdude command on the host PC</h2>
+<h2>enable to avrdude command on the host PC</h2>
 <p>on Windows, install <a href="http://winavr.sourceforge.net/" target="_blank">WinAVR</a> and set the path of avrdude command to command prompt</p>
 
-<h2>2.make an Arduino ISP gadget</h2>
+<h2>install <a href="https://www.arduino.cc/en/main/software" target="_blank">Arduino IDE</a></h2>
+
+<h2>make an Arduino ISP gadget</h2>
 <img src="./img_nanowriter/writer_diagram.png" width="30%">
 <img src="./img_nanowriter/writer_parts.jpg" width="30%">
 <img src="./img_nanowriter/writer.jpg" width="30%">
 <br>(and need a USB A-miniB cable)
 <ol>
          <li>make the gadget</li>
-         <li>install and run <a href="https://www.arduino.cc/en/main/software" target="_blank">Arduino IDE</a></li>
-         <li>load the sketch of ArduinoISP<br>File >> Examples >> 11.ArduinoISP >> ArduinoISP<br>
+         <li>run <a href="https://www.arduino.cc/en/main/software" target="_blank">Arduino IDE</a>, 
+                  and open the sketch of ArduinoISP<br>
+                  File >> Examples >> 11.ArduinoISP >> ArduinoISP<br>
                   <img src="./img_nanowriter/arduinoisp_load.png" width="30%"></li>
          <li>connect the gadget to the host PC
          <li>set configurations of the gadget<br>(In case the gadget is connected in COM18 USB port)<br>
@@ -19,7 +22,7 @@
          <li>Sketch >> Upload</li>
 </ol>
 
-<h2>3.set fuse bytes of the ATMEGA328P</h2>
+<h2>set fuse bytes of the ATMEGA328P</h2>
 <p>In case the Arduino ISP gadget is connected in COM18 USB port</p>
 <ol>
          <li>check the default setting<br># avrdude -c arduino -p m328p -P COM18 -b 19200 -v</li>
@@ -127,9 +130,9 @@ avrdude done.  Thank you.
 </pre>
 </ol>
 
-<h2>4.write a bootloader to the ATMEGA328P</h2>
+<h2>write a bootloader to the ATMEGA328P</h2>
 <p>Tool >> Burn Bootloader</p>
 
-<h2>5.write an Arduino sketch to the ATMEGA328P</h2>
+<h2>write an Arduino sketch to the ATMEGA328P</h2>
 <p><img src="./img_nanowriter/sketch_set.png" width="30%"></p>
 <p>Sketch >> Upload Using Programmer</p>
