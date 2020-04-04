@@ -2,7 +2,7 @@
 
 <h2>Materials</h2>
 <ul>
-         <li>PC (enable to running avrdude-command and Arduino software / USB2 port)</li>
+         <li>PC (enable to running avrdude-command and Arduino software / available USB2 port)</li>
          <li>Arduino Nano or compatible board</li>
          <li>USB cable (for connecting PC and Arduino)</li>
          <li>ATmega328P-PU (28pin DIP)</li>
@@ -22,7 +22,7 @@
 <hr>
 
 <h2>Enable to avrdude-command on the host PC</h2>
-<p>on Windows, install <a href="http://winavr.sourceforge.net/" target="_blank">WinAVR</a> and set the path of avrdude command to command prompt</p>
+<p>on Windows, install <a href="http://winavr.sourceforge.net/" target="_blank">WinAVR</a> and set the path of avrdude-command to command prompt</p>
 
 <h2>Enable to set ATmega328P on Arduino software</h2>
 <ol>
@@ -40,6 +40,7 @@
 <p>(that LED is for test)</p>
 <ol>
          <li>assemble the gadget</li>
+         <li><u>check again carefully 5V line and GND line are correct</u></li>
          <li>connect the gadget to the host PC
          <li>run <a href="https://www.arduino.cc/en/main/software" target="_blank">Arduino IDE</a> 
                   and open the sketch of ArduinoISP<br>
@@ -56,7 +57,7 @@
 <h2>Set fuse bytes of the ATmega328P</h2>
 <p>in case the Arduino ISP gadget is connected in COM18 USB port</p>
 <ol>
-         <li>check the default setting<br># avrdude -c arduino -p m328p -P COM18 -b 19200 -v</li>
+         <li>watch the present setting<br># avrdude -c arduino -p m328p -P COM18 -b 19200 -v</li>
 <pre>
 c:\>avrdude -c arduino -p m328p -P COM18 -b 19200 -v
 
@@ -198,9 +199,9 @@ avrdude done.  Thank you.
                   Board : ATmega328 on a breadboard (8 MHz internal clock)<br>
                   Programmer : Arduino as ISP<br>
                   <img src="./img_nanowriter/sketch_set.png" width="30%"></li>
-         <li>Upload the sketch to the ATmega328P<br>
+         <li>write the sketch to the ATmega328P<br>
                   Sketch >> <u>Upload Using Programmer</u></li>
-         <li>LED under PB0 blinks<br>
+         <li>LED at PB0 blinks<br>
                   <img src="./img_nanowriter/check.jpg" width="30%"></li>
 <p></p>
 
