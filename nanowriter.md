@@ -9,7 +9,7 @@
          <li>prototyping board / breadboard</li>
          <li>wire</li>
          <li>LED with resistor</li>
-         <li>(28pin ZIF socket / 28P IC socket, if available)</li>
+         <li>(28pin ZIF socket / 28pin IC socket, if available)</li>
 </ul>
 
 <h2>Process</h2>
