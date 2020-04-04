@@ -1,41 +1,41 @@
-<h1>How to write Arduino sketches to ATMEGA328P with ArduinoNANO compatibles</h1>
+<h1>How to write Arduino sketches to ATmega328P with Arduino Nano compatibles</h1>
 
 <h2>Materials</h2>
 <ul>
          <li>PC (enable to running avrdude-command and Arduino software / USB2 port)</li>
-         <li>Arduino NANO or compatibles</li>
+         <li>Arduino Nano or compatibles</li>
          <li>USB cable (for connecting PC and Arduino)</li>
-         <li>ATMEGA328P-PU (28pin DIP)</li>
+         <li>ATmega328P-PU (28pin DIP)</li>
          <li>prototyping board / breadboard</li>
          <li>wire</li>
          <li>LED with resistor</li>
-         <li>28pin ZIF socket / 28P IC socket, if available</li>
+         <li>(28pin ZIF socket / 28P IC socket, if available)</li>
 </ul>
 
 <h2>Process</h2>
 <ol>
-         <li>Set fuse bytes of the ATMEGA328P (use avrdude-command)</li>
-         <li>Write a bootloader to the ATMEGA328P (use Arduino software)</li>
-         <li>Write an Arduino sketch to the ATMEGA328P (use Arduino software)</li>
+         <li>Set fuse bytes of the ATmega328P (use avrdude-command)</li>
+         <li>Write a bootloader to the ATmega328P (use Arduino software)</li>
+         <li>Write an Arduino sketch to the ATmega328P (use Arduino software)</li>
 </ol>
 
 <h2>Enable to avrdude-command on the host PC</h2>
 <p>on Windows, install <a href="http://winavr.sourceforge.net/" target="_blank">WinAVR</a> and set the path of avrdude command to command prompt</p>
 
-<h2>Enable to set ATMEGA328 on Arduino software</h2>
-<ul>
+<h2>Enable to set ATmega328P on Arduino software</h2>
+<ol>
          <li>Install <a href="https://www.arduino.cc/en/main/software" target="_blank">Arduino IDE</a> to the host PC</li>
          <li>Download and extract<a href="https://www.arduino.cc/en/Tutorial/ArduinoToBreadboard" target="_blank">hardware configuration archive</a> (e.g. breadboard-1-6-x.zip)</li>
          <li>move the extracted archive (breadboard directory) to the install directory of Arduino IDE
                   (e.g. C:/Program Files (x86)/Arduino/hardware/) on the host PC</li>
-         <li>"ATmega328 on a breadboard (8 MHz internal clock)" is added in Arduino IDE Tools >> Board</li>
-</ul>
+         <li>check "ATmega328 on a breadboard (8 MHz internal clock)" is added in Arduino IDE Tools >> Board</li>
+</ol>
 
 <h2>Make an Arduino ISP gadget</h2>
 <img src="./img_nanowriter/writer_diagram.png" width="30%">
 <img src="./img_nanowriter/writer_parts.jpg" width="30%">
 <img src="./img_nanowriter/writer.jpg" width="30%">
-<p>(the LED is for test)</p>
+<p>(that LED is for test)</p>
 <ol>
          <li>assemble the gadget</li>
          <li>connect the gadget to the host PC
@@ -44,11 +44,14 @@
                   File >> Examples >> 11.ArduinoISP >> ArduinoISP<br>
                   <img src="./img_nanowriter/arduinoisp_load.png" width="30%"></li>
          <li>set configurations of the gadget<br>(In case the gadget is connected in COM18 USB port)<br>
+                  Board : Arduino Nano<br>
+                  Processor : ATmega328P<br>
+                  Programmer : USBasp<br>
                   <img src="./img_nanowriter/arduinoisp_set.png" width="30%"></li>
          <li>write the sketch of ArduinoISP<br>Sketch >> Upload</li>
 </ol>
 
-<h2>Set fuse bytes of the ATMEGA328P</h2>
+<h2>Set fuse bytes of the ATmega328P</h2>
 <p>In case the Arduino ISP gadget is connected in COM18 USB port</p>
 <ol>
          <li>check the default setting<br># avrdude -c arduino -p m328p -P COM18 -b 19200 -v</li>
@@ -156,9 +159,9 @@ avrdude done.  Thank you.
 </pre>
 </ol>
 
-<h2>Write a bootloader to the ATMEGA328P</h2>
+<h2>Write a bootloader to the ATmega328P</h2>
 <p>Tool >> Burn Bootloader</p>
 
-<h2>Write an Arduino sketch to the ATMEGA328P</h2>
+<h2>Write an Arduino sketch to the ATmega328P</h2>
 <p><img src="./img_nanowriter/sketch_set.png" width="30%"></p>
 <p>Sketch >> Upload Using Programmer</p>
