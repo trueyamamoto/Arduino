@@ -129,9 +129,9 @@ avrdude done.  Thank you.
 
 <li>set fuse bytes<br>
          # avrdude -c arduino -p m328p -P COM18 -b 19200 -U lfuse:w:0xe2:m -U hfuse:w:0xd9:m -U efuse:w:0x7:m<br>
-         In this example, low fuse byte is set to E2 in order to drive the ATmega328P at 8MHz.</li>
+         In this example, low fuse byte is set to 0xE2 (0b11100010) in order to drive the ATmega328P at 8MHz.</li>
 
-<table border="1">
+<p><table border="1">
          <caption>Fuse Low Byte</caption>
          <tr><th>Low Fuse Byte</th><th>Bit No</th><th>Description</th><th>Value</th></tr>
          <tr><td>CKDIV8</td><td>7</td><td>Divide clock by 8</td><td>1</td></tr>
@@ -142,9 +142,9 @@ avrdude done.  Thank you.
          <tr><td>CKSEL2</td><td>2</td><td>Select Clock source</td><td>0</td></tr>
          <tr><td>CKSEL1</td><td>1</td><td>Select Clock source</td><td>1</td></tr>
          <tr><td>CKSEL0</td><td>0</td><td>Select Clock source</td><td>0</td></tr>
-</table>
+</table></p>
 
-<table border="1">
+<p><table border="1">
          <caption>CKSEL options of Fuse Low Byte</caption>
          <tr><th>Device Clocking Option</th><th>CKSEL3..0</th></tr>
          <tr><td>Low Power Crystal Oscillator</td><td>1111 - 1000</td></tr>
@@ -154,7 +154,8 @@ avrdude done.  Thank you.
          <tr><td>Calibrated Internal RC Oscillator</td><td>0010</td></tr>
          <tr><td>External Clock</td><td>0000</td></tr>
          <tr><td>Reserved</td><td>0001</td></tr>
-</table>
+</table></p>
+
 <pre>
 c:\>avrdude -c arduino -p m328p -P COM18 -b 19200 -U lfuse:w:0xe2:m -U hfuse:w:0xd9:m -U efuse:w:0x7:m
 
