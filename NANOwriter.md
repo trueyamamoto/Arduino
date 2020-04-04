@@ -1,4 +1,5 @@
 <h1>How to write Arduino sketches to ATMEGA328P with ArduinoNANO compatibles</h1>
+
 <h2>1.enable to avrdude command on the host PC</h2>
 <p>on Windows, install <a href="http://winavr.sourceforge.net/" target="_blank">WinAVR</a> and set the path of avrdude command to command prompt</p>
 
@@ -7,8 +8,11 @@
 <p><img src="./img_nanowriter/writer_parts.jpg" width="30%"></p>
 <p><img src="./img_nanowriter/writer.jpg" width="30%"></p>
 <p>and need a USB A-miniB cable</p>
-<p><img src="./img_nanowriter/arduinoisp_load.png" width="30%"></p>
-<p><img src="./img_nanowriter/arduinoisp_set.png" width="30%"></p>
+<p>Install and run <a href="https://www.arduino.cc/en/main/software" target="_blank">Arduino IDE</a></p>
+<p>File >> Examples >> 11.ArduinoISP >> ArduinoISP<br>
+         <img src="./img_nanowriter/arduinoisp_load.png" width="30%"></p>
+<p>Board and Programmer setting<br>
+         <img src="./img_nanowriter/arduinoisp_set.png" width="30%"></p>
 <p>Sketch >> Upload</p>
 
 <h2>3.set fuse bytes of the ATMEGA328P</h2>
