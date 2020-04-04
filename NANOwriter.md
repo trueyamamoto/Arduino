@@ -10,8 +10,8 @@
 <br>(and need a USB A-miniB cable)
 <ol>
          <li>make the gadget</li>
-         <li>Install and run <a href="https://www.arduino.cc/en/main/software" target="_blank">Arduino IDE</a></li>
-         <li>File >> Examples >> 11.ArduinoISP >> ArduinoISP<br>
+         <li>install and run <a href="https://www.arduino.cc/en/main/software" target="_blank">Arduino IDE</a></li>
+         <li>load the sketch of ArduinoISP<br>File >> Examples >> 11.ArduinoISP >> ArduinoISP<br>
                   <img src="./img_nanowriter/arduinoisp_load.png" width="30%"></li>
          <li>connect the gadget to the host PC
          <li>set configurations of the gadget<br>(In case the gadget is connected in COM18 USB port)<br>
