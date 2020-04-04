@@ -40,7 +40,7 @@
 <p>(ATmega328P can also install to breadboard directly without a socket.)</p>
 <p>(that LED is for test)</p>
 <ol>
-         <li>assemble the gadget</li>
+         <li>assemble the gadget<br>(<b>Some pins are not soldered with pin header.</b>)</li>
          <li><b>check again carefully 5V line and GND line are correct</b></li>
          <li>connect the gadget to the host PC
          <li>run <a href="https://www.arduino.cc/en/main/software" target="_blank">Arduino IDE</a> 
