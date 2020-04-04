@@ -13,14 +13,16 @@
          <li>Install and run <a href="https://www.arduino.cc/en/main/software" target="_blank">Arduino IDE</a></li>
          <li>File >> Examples >> 11.ArduinoISP >> ArduinoISP<br>
                   <img src="./img_nanowriter/arduinoisp_load.png" width="30%"></li>
-         <li>Board and Programmer setting<br>
+         <li>connect the gadget to the host PC
+         <li>Board and Programmer setting<br>(In case the Arduino ISP gadget is connected in COM18 USB port)<br>
                   <img src="./img_nanowriter/arduinoisp_set.png" width="30%"></li>
          <li>Sketch >> Upload</li>
 </ol>
 
 <h2>3.set fuse bytes of the ATMEGA328P</h2>
 <p>In case the Arduino ISP gadget is connected in COM18 USB port</p>
-<p>check the default setting<br># avrdude -c arduino -p m328p -P COM18 -b 19200 -v</p>
+<ol>
+         <li>check the default setting<br># avrdude -c arduino -p m328p -P COM18 -b 19200 -v</li>
 <pre>
 c:\>avrdude -c arduino -p m328p -P COM18 -b 19200 -v
 
@@ -92,8 +94,9 @@ avrdude: safemode: Fuses OK
 
 avrdude done.  Thank you.
 </pre>
-<p>set fuse bytes<br># avrdude -c arduino -p m328p -P COM18 -b 19200 -U lfuse:w:0xe2:m -U hfuse:w:0xd9:m -U efuse:w:0x7:m</p>
 
+         <li>set fuse bytes<br>
+         # avrdude -c arduino -p m328p -P COM18 -b 19200 -U lfuse:w:0xe2:m -U hfuse:w:0xd9:m -U efuse:w:0x7:m</li>
 <pre>
 c:\>avrdude -c arduino -p m328p -P COM18 -b 19200 -U lfuse:w:0xe2:m -U hfuse:w:0xd9:m -U efuse:w:0x7:m
 
@@ -122,6 +125,7 @@ avrdude: safemode: Fuses OK
 
 avrdude done.  Thank you.
 </pre>
+</ol>
 
 <h2>4.write a bootloader to the ATMEGA328P</h2>
 <p>Tool >> Burn Bootloader</p>
