@@ -1,9 +1,9 @@
-<h1>How to write Arduino sketches to ATmega328P with Arduino Nano compatibles</h1>
+<h1>How to write Arduino sketches to ATmega328P with an Arduino Nano compatible board</h1>
 
 <h2>Materials</h2>
 <ul>
          <li>PC (enable to running avrdude-command and Arduino software / USB2 port)</li>
-         <li>Arduino Nano or compatibles</li>
+         <li>Arduino Nano or compatible board</li>
          <li>USB cable (for connecting PC and Arduino)</li>
          <li>ATmega328P-PU (28pin DIP)</li>
          <li>prototyping board / breadboard</li>
@@ -18,6 +18,8 @@
          <li>Write a bootloader to the ATmega328P (use Arduino software)</li>
          <li>Write an Arduino sketch to the ATmega328P (use Arduino software)</li>
 </ol>
+
+<hr>
 
 <h2>Enable to avrdude-command on the host PC</h2>
 <p>on Windows, install <a href="http://winavr.sourceforge.net/" target="_blank">WinAVR</a> and set the path of avrdude command to command prompt</p>
@@ -201,3 +203,5 @@ avrdude done.  Thank you.
          <li>LED under PB0 blinks<br>
                   <img src="./img_nanowriter/check.jpg" width="30%"></li>
 <p></p>
+
+<hr>
