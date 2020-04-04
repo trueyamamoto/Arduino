@@ -190,8 +190,14 @@ avrdude done.  Thank you.
 <p>Tool >> Burn Bootloader</p>
 
 <h2>Write an Arduino sketch to the ATmega328P</h2>
-Board : ATmega328 on a breadboard (8 MHz internal clock)<br>
-Programmer : Arduino as ISP<br>
-<p><img src="./img_nanowriter/sketch_set.png" width="30%"></p>
-<p>Sketch >> <b>Upload Using Programmer</b></p>
-https://github.com/trueyamamoto/Arduino/blob/master/led_blink.ino
+<ol>
+         <li>open the <a href="https://github.com/trueyamamoto/Arduino/blob/master/led_blink.ino" target="_blank">sample sketch</a></li>
+         <li>set configurations of the gadget<br>
+                  Board : ATmega328 on a breadboard (8 MHz internal clock)<br>
+                  Programmer : Arduino as ISP<br>
+                  <img src="./img_nanowriter/sketch_set.png" width="30%"></li>
+         <li>Upload the sketch to the ATmega328P<br>
+                  Sketch >> <u>Upload Using Programmer</u></li>
+         <li>LED under PB0 blinks
+                  <img src="./img_nanowriter/check.png" width="30%"></li>
+<p></p>
