@@ -52,7 +52,7 @@
 </ol>
 
 <h2>Set fuse bytes of the ATmega328P</h2>
-<p>In case the Arduino ISP gadget is connected in COM18 USB port</p>
+<p>in case the Arduino ISP gadget is connected in COM18 USB port</p>
 <ol>
          <li>check the default setting<br># avrdude -c arduino -p m328p -P COM18 -b 19200 -v</li>
 <pre>
@@ -130,6 +130,28 @@ avrdude done.  Thank you.
 <li>set fuse bytes<br>
          In this example, low fuse byte is set to E2 in order to drive the ATmega328P at 8MHz.<br>
          # avrdude -c arduino -p m328p -P COM18 -b 19200 -U lfuse:w:0xe2:m -U hfuse:w:0xd9:m -U efuse:w:0x7:m</li>
+
+<table border="1">
+         <tr><td>Low Fuse Byte</td><td>Bit No</td><td>Description</td><td>Default Value</td></tr>
+         <tr><td>CKDIV8</td><td>7</td><td>Divide clock by 8</td><td>1</td></tr>
+         <tr><td>CKOUT</td><td>6</td><td>Clock output</td><td>1</td></tr>
+         <tr><td>SUT1</td><td>5</td><td>Select start-up time</td><td>1</td></tr>
+         <tr><td>SUT0</td><td>4</td><td>Select start-up time</td><td>0</td></tr>
+         <tr><td>CKSEL3</td><td>3</td><td>Select Clock source</td><td>0</td></tr>
+         <tr><td>CKSEL2</td><td>2</td><td>Select Clock source</td><td>0</td></tr>
+         <tr><td>CKSEL1</td><td>1</td><td>Select Clock source</td><td>1</td></tr>
+         <tr><td>CKSEL0</td><td>0</td><td>Select Clock source</td><td>0</td></tr>
+</table>
+<table border="1">
+         <tr><td>Device Clocking Option</td><td>CKSEL3..0</td></tr>
+         <tr><td>Low Power Crystal Oscillator</td><td>1111 - 1000</td></tr>
+         <tr><td>Full Swing Crystal Oscillator</td><td>0111 - 0110</td></tr>
+         <tr><td>Low Frequency Crystal Oscillator</td><td>0101 - 0100</td></tr>
+         <tr><td>Internal 128 kHz RC Oscillator</td><td>0011</td></tr>
+         <tr><td>Calibrated Internal RC Oscillator</td><td>0010</td></tr>
+         <tr><td>External Clock</td><td>0000</td></tr>
+         <tr><td>Reserved</td><td>0001</td></tr>
+</table>
 <pre>
 c:\>avrdude -c arduino -p m328p -P COM18 -b 19200 -U lfuse:w:0xe2:m -U hfuse:w:0xd9:m -U efuse:w:0x7:m
 
