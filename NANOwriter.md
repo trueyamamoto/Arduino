@@ -1,15 +1,19 @@
 <h1>How to write Arduino sketches to ATMEGA328P with ArduinoNANO compatibles</h1>
 <h2>1.enable to avrdude command on the host PC</h2>
-<p>if on Windows, install <a href="http://winavr.sourceforge.net/" target="_blank">WinAVR</a> and set the path of avrdude command to command prompt</p>
+<p>on Windows, install <a href="http://winavr.sourceforge.net/" target="_blank">WinAVR</a> and set the path of avrdude command to command prompt</p>
 
 <h2>2.make an Arduino ISP gadget</h2>
 <p><img src="./img_nanowriter/writer_diagram.png" width="30%"></p>
 <p><img src="./img_nanowriter/writer_parts.jpg" width="30%"></p>
 <p><img src="./img_nanowriter/writer.jpg" width="30%"></p>
+<p>and need a USB A-miniB cable</p>
+<p><img src="./img_nanowriter/arduinoisp_load.png" width="30%"></p>
+<p><img src="./img_nanowriter/arduinoisp_set.png" width="30%"></p>
+<p>Sketch >> Upload</p>
 
 <h2>3.set fuse bytes of the ATMEGA328P</h2>
+<p>In case the Arduino ISP gadget is connected in COM18 USB port</p>
 <p>check the default setting</p>
-<p>if connect the Arduino ISP gadget in COM18 USB port</p>
 <pre>
 c:\>avrdude -c arduino -p m328p -P COM18 -b 19200 -v
 
@@ -119,6 +123,10 @@ avrdude: safemode: Fuses OK
 
 avrdude done.  Thank you.
 </pre>
+
 <h2>4.write a bootloader to the ATMEGA328P</h2>
+<p>Tool >> Burn Bootloader</p>
 
 <h2>5.write an Arduino sketch to the ATMEGA328P</h2>
+<p><img src="./img_nanowriter/sketch_set.png" width="30%"></p>
+<p>Sketch >> Upload Using Programmer</p>
