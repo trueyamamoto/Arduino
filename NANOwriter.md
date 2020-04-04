@@ -128,11 +128,12 @@ avrdude done.  Thank you.
 </pre>
 
 <li>set fuse bytes<br>
-         In this example, low fuse byte is set to E2 in order to drive the ATmega328P at 8MHz.<br>
-         # avrdude -c arduino -p m328p -P COM18 -b 19200 -U lfuse:w:0xe2:m -U hfuse:w:0xd9:m -U efuse:w:0x7:m</li>
+         # avrdude -c arduino -p m328p -P COM18 -b 19200 -U lfuse:w:0xe2:m -U hfuse:w:0xd9:m -U efuse:w:0x7:m<br>
+         In this example, low fuse byte is set to E2 in order to drive the ATmega328P at 8MHz.</li>
 
 <table border="1">
-         <tr><td>Low Fuse Byte</td><td>Bit No</td><td>Description</td><td>Default Value</td></tr>
+         <caption>Fuse Low Byte</caption>
+         <tr><th>Low Fuse Byte</th><th>Bit No</th><th>Description</th><th>Value</th></tr>
          <tr><td>CKDIV8</td><td>7</td><td>Divide clock by 8</td><td>1</td></tr>
          <tr><td>CKOUT</td><td>6</td><td>Clock output</td><td>1</td></tr>
          <tr><td>SUT1</td><td>5</td><td>Select start-up time</td><td>1</td></tr>
@@ -142,8 +143,10 @@ avrdude done.  Thank you.
          <tr><td>CKSEL1</td><td>1</td><td>Select Clock source</td><td>1</td></tr>
          <tr><td>CKSEL0</td><td>0</td><td>Select Clock source</td><td>0</td></tr>
 </table>
+
 <table border="1">
-         <tr><td>Device Clocking Option</td><td>CKSEL3..0</td></tr>
+         <caption>CKSEL options of Fuse Low Byte</caption>
+         <tr><th>Device Clocking Option</th><th>CKSEL3..0</th></tr>
          <tr><td>Low Power Crystal Oscillator</td><td>1111 - 1000</td></tr>
          <tr><td>Full Swing Crystal Oscillator</td><td>0111 - 0110</td></tr>
          <tr><td>Low Frequency Crystal Oscillator</td><td>0101 - 0100</td></tr>
