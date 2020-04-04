@@ -4,8 +4,8 @@
 
 <h2>2.make an Arduino ISP gadget</h2>
 <p><img src="./img_nanowriter/writer_diagram.png" width="30%"></p>
-<p><img src="./img_nanowriter/writer_parts.png" width="30%"></p>
-<p><img src="./img_nanowriter/writer.png" width="30%"></p>
+<p><img src="./img_nanowriter/writer_parts.jpg" width="30%"></p>
+<p><img src="./img_nanowriter/writer.jpg" width="30%"></p>
 
 <h2>3.set fuse bytes of the ATMEGA328P</h2>
 
