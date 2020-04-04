@@ -3,7 +3,7 @@
 <p>if on Windows, install <a href="http://winavr.sourceforge.net/" target="_blank">WinAVR</a> and set the path of avrdude command to command prompt</p>
 
 <h2>2.make an Arduino ISP gadget</h2>
-<img src="./img_nanowriter/writer_diagram.png">
+<img src="./img_nanowriter/writer_diagram.png" width="30%">
 
 <h2>3.set fuse bytes of the ATMEGA328P</h2>
 
