@@ -198,6 +198,6 @@ avrdude done.  Thank you.
                   <img src="./img_nanowriter/sketch_set.png" width="30%"></li>
          <li>Upload the sketch to the ATmega328P<br>
                   Sketch >> <u>Upload Using Programmer</u></li>
-         <li>LED under PB0 blinks
+         <li>LED under PB0 blinks<br>
                   <img src="./img_nanowriter/check.jpg" width="30%"></li>
 <p></p>
