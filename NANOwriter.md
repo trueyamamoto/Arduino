@@ -14,7 +14,7 @@
          <li>File >> Examples >> 11.ArduinoISP >> ArduinoISP<br>
                   <img src="./img_nanowriter/arduinoisp_load.png" width="30%"></li>
          <li>connect the gadget to the host PC
-         <li>Board and Programmer setting<br>(In case the Arduino ISP gadget is connected in COM18 USB port)<br>
+         <li>set configurations of the gadget<br>(In case the gadget is connected in COM18 USB port)<br>
                   <img src="./img_nanowriter/arduinoisp_set.png" width="30%"></li>
          <li>Sketch >> Upload</li>
 </ol>
@@ -95,7 +95,7 @@ avrdude: safemode: Fuses OK
 avrdude done.  Thank you.
 </pre>
 
-         <li>set fuse bytes<br>
+<li>set fuse bytes<br>
          # avrdude -c arduino -p m328p -P COM18 -b 19200 -U lfuse:w:0xe2:m -U hfuse:w:0xd9:m -U efuse:w:0x7:m</li>
 <pre>
 c:\>avrdude -c arduino -p m328p -P COM18 -b 19200 -U lfuse:w:0xe2:m -U hfuse:w:0xd9:m -U efuse:w:0x7:m
