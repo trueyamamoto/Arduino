@@ -1,9 +1,21 @@
 <h1>How to write Arduino sketches to ATMEGA328P with ArduinoNANO compatibles</h1>
 
+<h2>Materials</h2>
+<ul>
+         <li>PC (enable to running avrdude command and Arduino software / USB2 port)</li>
+         <li>Arduino NANO or compatibles</li>
+         <li>USB cable</li>
+         <li>ATMEGA328P-PU (28pin DIP)</li>
+         <li>prototyping board / breadboard</li>
+         <li>wire</li>
+         <li>LED with registor</li>
+         <li>28pin ZIF socket / 28P IC socket, if avairable</li>
+</ul>
+
 <h2>enable to avrdude command on the host PC</h2>
 <p>on Windows, install <a href="http://winavr.sourceforge.net/" target="_blank">WinAVR</a> and set the path of avrdude command to command prompt</p>
 
-<h2>install <a href="https://www.arduino.cc/en/main/software" target="_blank">Arduino IDE</a></h2>
+<h2>install <a href="https://www.arduino.cc/en/main/software" target="_blank">Arduino IDE to the host PC</a></h2>
 
 <h2>make an Arduino ISP gadget</h2>
 <img src="./img_nanowriter/writer_diagram.png" width="30%">
