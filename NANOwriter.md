@@ -4,7 +4,7 @@
 <ul>
          <li>PC (enable to running avrdude-command and Arduino software / USB2 port)</li>
          <li>Arduino NANO or compatibles</li>
-         <li>USB cable</li>
+         <li>USB cable (for connecting PC and Arduino)</li>
          <li>ATMEGA328P-PU (28pin DIP)</li>
          <li>prototyping board / breadboard</li>
          <li>wire</li>
@@ -12,26 +12,39 @@
          <li>28pin ZIF socket / 28P IC socket, if available</li>
 </ul>
 
+<h2>Process</h2>
+<ul>
+         <li>Enable to avrdude command on the host PC</li>
+         <li>Enable to avrdude command on the host PC</li>
+</ul>
+
 <h2>Enable to avrdude command on the host PC</h2>
 <p>on Windows, install <a href="http://winavr.sourceforge.net/" target="_blank">WinAVR</a> and set the path of avrdude command to command prompt</p>
 
-<h2>Install <a href="https://www.arduino.cc/en/main/software" target="_blank">Arduino IDE to the host PC</a></h2>
+<h2>Enable to set ATMEGA328 on Arduino software</h2>
+<ul>
+         <li>Install <a href="https://www.arduino.cc/en/main/software" target="_blank">Arduino IDE</a> to the host PC</li>
+         <li>Download and extract<a href="https://www.arduino.cc/en/Tutorial/ArduinoToBreadboard" target="_blank">hardware configuration archive</a> (e.g. breadboard-1-6-x.zip)</li>
+         <li>move the extracted archive (breadboard directory) to the install directory of Arduino IDE
+                  (e.g. C:/Program Files (x86)/Arduino/hardware/) on the host PC</li>
+         <li>"ATmega328 on a breadboard (8 MHz internal clock)" is added in Arduino IDE Tools >> Board</li>
+</ul>
 
 <h2>Make an Arduino ISP gadget</h2>
 <img src="./img_nanowriter/writer_diagram.png" width="30%">
 <img src="./img_nanowriter/writer_parts.jpg" width="30%">
 <img src="./img_nanowriter/writer.jpg" width="30%">
-<br>(and need a USB A-miniB cable)
+<p>(the LED is for test)</p>
 <ol>
-         <li>make the gadget</li>
-         <li>run <a href="https://www.arduino.cc/en/main/software" target="_blank">Arduino IDE</a>, 
+         <li>assemble the gadget</li>
+         <li>connect the gadget to the host PC
+         <li>run <a href="https://www.arduino.cc/en/main/software" target="_blank">Arduino IDE</a> 
                   and open the sketch of ArduinoISP<br>
                   File >> Examples >> 11.ArduinoISP >> ArduinoISP<br>
                   <img src="./img_nanowriter/arduinoisp_load.png" width="30%"></li>
-         <li>connect the gadget to the host PC
          <li>set configurations of the gadget<br>(In case the gadget is connected in COM18 USB port)<br>
                   <img src="./img_nanowriter/arduinoisp_set.png" width="30%"></li>
-         <li>Sketch >> Upload</li>
+         <li>write the sketch of ArduinoISP<br>Sketch >> Upload</li>
 </ol>
 
 <h2>Set fuse bytes of the ATMEGA328P</h2>
