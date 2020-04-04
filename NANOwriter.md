@@ -25,7 +25,7 @@
 <h2>Enable to set ATmega328P on Arduino software</h2>
 <ol>
          <li>Install <a href="https://www.arduino.cc/en/main/software" target="_blank">Arduino IDE</a> to the host PC</li>
-         <li>Download and extract<a href="https://www.arduino.cc/en/Tutorial/ArduinoToBreadboard" target="_blank">hardware configuration archive</a> (e.g. breadboard-1-6-x.zip)</li>
+         <li>Download and extract <a href="https://www.arduino.cc/en/Tutorial/ArduinoToBreadboard" target="_blank">hardware configuration archive</a> (e.g. breadboard-1-6-x.zip)</li>
          <li>move the extracted archive (breadboard directory) to the install directory of Arduino IDE
                   (e.g. C:/Program Files (x86)/Arduino/hardware/) on the host PC</li>
          <li>check "ATmega328 on a breadboard (8 MHz internal clock)" is added in Arduino IDE Tools >> Board</li>
@@ -128,6 +128,7 @@ avrdude done.  Thank you.
 </pre>
 
 <li>set fuse bytes<br>
+         In this example, low fuse byte is set to E2 in order to drive the ATmega328P at 8MHz.<br>
          # avrdude -c arduino -p m328p -P COM18 -b 19200 -U lfuse:w:0xe2:m -U hfuse:w:0xd9:m -U efuse:w:0x7:m</li>
 <pre>
 c:\>avrdude -c arduino -p m328p -P COM18 -b 19200 -U lfuse:w:0xe2:m -U hfuse:w:0xd9:m -U efuse:w:0x7:m
