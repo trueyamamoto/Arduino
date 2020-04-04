@@ -13,7 +13,7 @@
 
 <h2>3.set fuse bytes of the ATMEGA328P</h2>
 <p>In case the Arduino ISP gadget is connected in COM18 USB port</p>
-<p>check the default setting</p>
+<p>check the default setting<br># avrdude -c arduino -p m328p -P COM18 -b 19200 -v</p>
 <pre>
 c:\>avrdude -c arduino -p m328p -P COM18 -b 19200 -v
 
@@ -44,28 +44,20 @@ avrdude: Version 5.10, compiled on Jan 19 2010 at 10:45:23
          PollValue                     : 0x53
          Memory Detail                 :
 
-                                  Block Poll               Page
-      Polled
-           Memory Type Mode Delay Size  Indx Paged  Size   Size #Pages MinW  Max
-W   ReadBack
-           ----------- ---- ----- ----- ---- ------ ------ ---- ------ ----- ---
--- ---------
-           eeprom        65     5     4    0 no       1024    4      0  3600  36
-00 0xff 0xff
-           flash         65     6   128    0 yes     32768  128    256  4500  45
-00 0xff 0xff
-           lfuse          0     0     0    0 no          1    0      0  4500  45
-00 0x00 0x00
-           hfuse          0     0     0    0 no          1    0      0  4500  45
-00 0x00 0x00
-           efuse          0     0     0    0 no          1    0      0  4500  45
-00 0x00 0x00
-           lock           0     0     0    0 no          1    0      0  4500  45
-00 0x00 0x00
-           calibration    0     0     0    0 no          1    0      0     0
- 0 0x00 0x00
-           signature      0     0     0    0 no          3    0      0     0
- 0 0x00 0x00
+                                  Block Poll               Page      Polled
+           Memory Type Mode Delay Size  Indx Paged  Size   Size #Pages MinW  MaxW   ReadBack
+
+           ----------- ---- ----- ----- ---- ------ ------ ---- ------ ----- ----- ---------
+
+           eeprom        65     5     4    0 no       1024    4      0  3600  3600 0xff 0xff
+           flash         65     6   128    0 yes     32768  128    256  4500  4500 0xff 0xff
+           lfuse          0     0     0    0 no          1    0      0  4500  4500 0x00 0x00
+           hfuse          0     0     0    0 no          1    0      0  4500  4500 0x00 0x00
+           efuse          0     0     0    0 no          1    0      0  4500  4500 0x00 0x00
+           lock           0     0     0    0 no          1    0      0  4500  4500 0x00 0x00
+           calibration    0     0     0    0 no          1    0      0     0     0 0x00 0x00
+           signature      0     0     0    0 no          3    0      0     0     0 0x00 0x00
+
 
          Programmer Type : Arduino
          Description     : Arduino
@@ -93,10 +85,10 @@ avrdude: safemode: Fuses OK
 
 avrdude done.  Thank you.
 </pre>
-<p>set fuse bytes</p>
+<p>set fuse bytes<br># avrdude -c arduino -p m328p -P COM18 -b 19200 -U lfuse:w:0xe2:m -U hfuse:w:0xd9:m -U efuse:w:0x7:m</p>
+
 <pre>
-c:\>avrdude -c arduino -p m328p -P COM18 -b 19200 -U lfuse:w:0xe2:m hfuse:w:0xd
-:m efuse:w:0x7:m
+c:\>avrdude -c arduino -p m328p -P COM18 -b 19200 -U lfuse:w:0xe2:m -U hfuse:w:0xd9:m -U efuse:w:0x7:m
 
 avrdude: AVR device initialized and ready to accept instructions
 
