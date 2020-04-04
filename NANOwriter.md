@@ -13,12 +13,13 @@
 </ul>
 
 <h2>Process</h2>
-<ul>
-         <li>Enable to avrdude command on the host PC</li>
-         <li>Enable to avrdude command on the host PC</li>
-</ul>
+<ol>
+         <li>Set fuse bytes of the ATMEGA328P (use avrdude-command)</li>
+         <li>Write a bootloader to the ATMEGA328P (use Arduino software)</li>
+         <li>Write an Arduino sketch to the ATMEGA328P (use Arduino software)</li>
+</ol>
 
-<h2>Enable to avrdude command on the host PC</h2>
+<h2>Enable to avrdude-command on the host PC</h2>
 <p>on Windows, install <a href="http://winavr.sourceforge.net/" target="_blank">WinAVR</a> and set the path of avrdude command to command prompt</p>
 
 <h2>Enable to set ATMEGA328 on Arduino software</h2>
