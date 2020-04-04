@@ -40,7 +40,7 @@
 <p>(that LED is for test)</p>
 <ol>
          <li>assemble the gadget</li>
-         <li><u>check again carefully 5V line and GND line are correct</u></li>
+         <li><b>check again carefully 5V line and GND line are correct</b></li>
          <li>connect the gadget to the host PC
          <li>run <a href="https://www.arduino.cc/en/main/software" target="_blank">Arduino IDE</a> 
                   and open the sketch of ArduinoISP<br>
@@ -200,7 +200,7 @@ avrdude done.  Thank you.
                   Programmer : Arduino as ISP<br>
                   <img src="./img_nanowriter/sketch_set.png" width="30%"></li>
          <li>write the sketch to the ATmega328P<br>
-                  Sketch >> <u>Upload Using Programmer</u></li>
+                  Sketch >> <b>Upload Using Programmer</b></li>
          <li>LED at PB0 blinks<br>
                   <img src="./img_nanowriter/check.jpg" width="30%"></li>
 <p></p>
