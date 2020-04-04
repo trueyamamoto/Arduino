@@ -37,6 +37,7 @@
 <img src="./img_nanowriter/writer_diagram.png" width="30%">
 <img src="./img_nanowriter/writer_parts.jpg" width="30%">
 <img src="./img_nanowriter/writer.jpg" width="30%">
+<p>(ATmega328P can also install to breadboard directly without a socket.)</p>
 <p>(that LED is for test)</p>
 <ol>
          <li>assemble the gadget</li>
