@@ -89,7 +89,36 @@ avrdude: safemode: Fuses OK
 
 avrdude done.  Thank you.
 </pre>
+<p>set fuse bytes</p>
+<pre>
+c:\>avrdude -c arduino -p m328p -P COM18 -b 19200 -U lfuse:w:0xe2:m hfuse:w:0xd
+:m efuse:w:0x7:m
 
+avrdude: AVR device initialized and ready to accept instructions
+
+Reading | ################################################## | 100% 0.01s
+
+avrdude: Device signature = 0x1e950f
+avrdude: reading input file "0xe2"
+avrdude: writing lfuse (1 bytes):
+
+Writing | ################################################## | 100% 0.03s
+
+avrdude: 1 bytes of lfuse written
+avrdude: verifying lfuse memory against 0xe2:
+avrdude: load data lfuse data from input file 0xe2:
+avrdude: input file 0xe2 contains 1 bytes
+avrdude: reading on-chip lfuse data:
+
+Reading | ################################################## | 100% 0.01s
+
+avrdude: verifying ...
+avrdude: 1 bytes of lfuse verified
+
+avrdude: safemode: Fuses OK
+
+avrdude done.  Thank you.
+</pre>
 <h2>4.write a bootloader to the ATMEGA328P</h2>
 
 <h2>5.write an Arduino sketch to the ATMEGA328P</h2>
