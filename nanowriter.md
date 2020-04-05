@@ -136,7 +136,7 @@ avrdude done.  Thank you.
          In this example, low fuse byte is set to 0xE2 (0b11100010) in order to drive the ATmega328P at 8MHz.</li>
 
 <p><table border="1">
-         <caption>ATmega168/328 Fuse Low Byte</caption>
+         <caption>ATmega88/168/328 Fuse Low Byte</caption>
          <tr><th>Low Fuse Byte</th><th>Bit No</th><th>Description</th><th>Value</th></tr>
          <tr><td>CKDIV8</td><td>7</td><td>Divide clock by 8</td><td>1</td></tr>
          <tr><td>CKOUT</td><td>6</td><td>Clock output</td><td>1</td></tr>
@@ -149,7 +149,7 @@ avrdude done.  Thank you.
 </table></p>
 
 <p><table border="1">
-         <caption>ATmega168/328 CKSEL options of Fuse Low Byte</caption>
+         <caption>ATmega88/168/328 CKSEL options of Fuse Low Byte</caption>
          <tr><th>Device Clocking Option</th><th>CKSEL3..0</th></tr>
          <tr><td>Low Power Crystal Oscillator</td><td>1111 - 1000</td></tr>
          <tr><td>Full Swing Crystal Oscillator</td><td>0111 - 0110</td></tr>
