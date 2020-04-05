@@ -203,6 +203,7 @@ avrdude done.  Thank you.
 <h2>Write an Arduino sketch to the ATmega328P</h2>
 <ol>
          <li>download and open the <a href="https://github.com/trueyamamoto/Arduino/blob/master/led_blink.ino" target="_blank">sample sketch</a> on Arduino IDE</li>
+         <li>configuration is same as the bootloader writing</li>
          <li>write the sketch to the ATmega328P<br>
                   Sketch >> <b>Upload Using Programmer</b></li>
          <li>LED at PB0 blinks<br>
