@@ -26,11 +26,11 @@
 
 <h2>Enable to set ATmega328P on Arduino software</h2>
 <ol>
-         <li>Install <a href="https://www.arduino.cc/en/main/software" target="_blank">Arduino IDE</a> to the host PC</li>
-         <li>Download and extract <a href="https://www.arduino.cc/en/Tutorial/ArduinoToBreadboard" target="_blank">hardware configuration archive</a> (e.g. breadboard-1-6-x.zip)</li>
-         <li>move the extracted archive (breadboard directory) to the install directory of Arduino IDE
+         <li>install <a href="https://www.arduino.cc/en/main/software" target="_blank">Arduino IDE</a> to the host PC</li>
+         <li>download and extract <a href="https://www.arduino.cc/en/Tutorial/ArduinoToBreadboard" target="_blank">hardware configuration archive</a> (e.g. breadboard-1-6-x.zip)</li>
+         <li>move the extracted archive ("breadboard" directory) to the install directory of Arduino IDE
                   (e.g. C:/Program Files (x86)/Arduino/hardware/) on the host PC</li>
-         <li>check "ATmega328 on a breadboard (8 MHz internal clock)" is added in Arduino IDE Tools >> Board</li>
+         <li>check "ATmega328 on a breadboard (8 MHz internal clock)" is added in Arduino IDE menu<br>Tools >> Board</li>
 </ol>
 
 <h2>Make an Arduino ISP gadget</h2>
@@ -40,19 +40,19 @@
 <p>(ATmega328P can be also installed to breadboard directly without a socket.)</p>
 <p>(that LED is for test)</p>
 <ol>
-         <li>assemble the gadget<br>(<b>Some pins are not soldered with pin header.</b>)</li>
-         <li><b>check again carefully 5V line and GND line are correct</b></li>
+         <li>assemble the gadget<br>(<b>Some pins are not soldered with pin header.</b> Check the picture.)</li>
+         <li><b>check again carefully 5V line and GND line are correct</b><br>Otherwise the Arduino Nano will be burned.</li>
          <li>connect the gadget to the host PC
-         <li>run <a href="https://www.arduino.cc/en/main/software" target="_blank">Arduino IDE</a> 
-                  and open the sketch of ArduinoISP<br>
+         <li>run Arduino IDE and open the ArduinoISP sketch<br>
                   File >> Examples >> 11.ArduinoISP >> ArduinoISP<br>
                   <img src="./img_nanowriter/arduinoisp_load.png" width="30%"></li>
-         <li>set configurations of the gadget<br>(In case the gadget is connected in COM18 USB port)<br>
+         <li>set configurations of the gadget<br>
                   Board : Arduino Nano<br>
                   Processor : ATmega328P<br>
                   Programmer : USBasp<br>
+                  (in case the gadget is connected in COM18 USB port)<br>
                   <img src="./img_nanowriter/arduinoisp_set.png" width="30%"></li>
-         <li>write the sketch of ArduinoISP<br>Sketch >> Upload</li>
+         <li>write the ArduinoISP sketch<br>Sketch >> Upload</li>
 </ol>
 
 <h2>Set fuse bytes of the ATmega328P</h2>
@@ -136,7 +136,7 @@ avrdude done.  Thank you.
          In this example, low fuse byte is set to 0xE2 (0b11100010) in order to drive the ATmega328P at 8MHz.</li>
 
 <p><table border="1">
-         <caption>Fuse Low Byte</caption>
+         <caption>ATmega168/328 Fuse Low Byte</caption>
          <tr><th>Low Fuse Byte</th><th>Bit No</th><th>Description</th><th>Value</th></tr>
          <tr><td>CKDIV8</td><td>7</td><td>Divide clock by 8</td><td>1</td></tr>
          <tr><td>CKOUT</td><td>6</td><td>Clock output</td><td>1</td></tr>
@@ -149,7 +149,7 @@ avrdude done.  Thank you.
 </table></p>
 
 <p><table border="1">
-         <caption>CKSEL options of Fuse Low Byte</caption>
+         <caption>ATmega168/328 CKSEL options of Fuse Low Byte</caption>
          <tr><th>Device Clocking Option</th><th>CKSEL3..0</th></tr>
          <tr><td>Low Power Crystal Oscillator</td><td>1111 - 1000</td></tr>
          <tr><td>Full Swing Crystal Oscillator</td><td>0111 - 0110</td></tr>
@@ -191,15 +191,18 @@ avrdude done.  Thank you.
 </ol>
 
 <h2>Write a bootloader to the ATmega328P</h2>
-<p>Tool >> Burn Bootloader</p>
-
-<h2>Write an Arduino sketch to the ATmega328P</h2>
 <ol>
-         <li>download and open the <a href="https://github.com/trueyamamoto/Arduino/blob/master/led_blink.ino" target="_blank">sample sketch</a> on Arduino IDE</li>
+         <li>run Arduino IED</li>
          <li>set configurations of the Arduino ISP gadget<br>
                   Board : ATmega328 on a breadboard (8 MHz internal clock)<br>
                   Programmer : Arduino as ISP<br>
                   <img src="./img_nanowriter/sketch_set.png" width="30%"></li>
+         <li>Tool >> Burn Bootloader</li>
+</ol>
+
+<h2>Write an Arduino sketch to the ATmega328P</h2>
+<ol>
+         <li>download and open the <a href="https://github.com/trueyamamoto/Arduino/blob/master/led_blink.ino" target="_blank">sample sketch</a> on Arduino IDE</li>
          <li>write the sketch to the ATmega328P<br>
                   Sketch >> <b>Upload Using Programmer</b></li>
          <li>LED at PB0 blinks<br>
